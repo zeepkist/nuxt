@@ -1,12 +1,14 @@
 ---
-title: BlueprintsX
-description: A description of BlueprintsX
-author: Metalted
-authorSteamId: 76561198932043314
-version: 1.0.0
-supported: true
-modio: https://mod.io/g/zeepkist/m/blueprintsx
+title: Best Mod
+description: Example Description
+author: Thundernerd
+authorSteamId: 76561198023561976
+version: 0.1.0
+supported: false
+modio: https://mod.io/g/zeepkist/m/zeepkist-gtr
 ---
+
+This is an example mod page.
 
 ## Setup
 

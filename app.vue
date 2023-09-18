@@ -17,6 +17,8 @@
 		--text-colour: #080b19;
 		--accent-colour: #ffa926;
 		--border-colour: #333335;
+		--error-colour: #ff0000;
+		--error-background-colour: #ff111111;
 	}
 
 	html.dark-mode {

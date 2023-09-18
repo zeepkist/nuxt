@@ -1,20 +1,30 @@
 <template>
 	<h1>Mods for Zeepkist</h1>
+	<h2>Supported Mods</h2>
 	<section :class="$style.articles">
 		<ContentList v-slot="{ list }" path="/mods">
-			<a
-				v-for="article in list"
+			<CardMod
+				v-for="article in list.filter(article => article.supported)"
 				:key="article._path"
-				:class="$style.article"
-				:href="article._path">
-				<h2>
-					{{ article.title }}
-					<template v-if="article.version">
-						({{ article.version }})
-					</template>
-				</h2>
-				<p>{{ article.description }}</p>
-			</a>
+				:href="article._path"
+				:title="article.title"
+				:version="article.version"
+				:author="article.author"
+				:description="article.description" />
+		</ContentList>
+	</section>
+
+	<h2>Unsupported Mods</h2>
+	<section :class="$style.articles">
+		<ContentList v-slot="{ list }" path="/mods">
+			<CardMod
+				v-for="article in list.filter(article => !article.supported)"
+				:key="article._path"
+				:href="article._path"
+				:title="article.title"
+				:version="article.version"
+				:author="article.author"
+				:description="article.description" />
 		</ContentList>
 	</section>
 </template>
@@ -25,6 +35,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 1rem;
+		margin: 1rem 0;
 	}
 
 	.article {
@@ -39,6 +50,10 @@
 		min-width: 25rem;
 		padding: 1rem;
 		transition: border-color 0.3s;
+
+		p {
+			font-size: 0.9rem;
+		}
 
 		h2 {
 			transition: color 0.3s;
