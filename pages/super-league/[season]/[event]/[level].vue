@@ -1,3 +1,3 @@
 <template>
-  <p>Super League Event Level</p>
+	<p>Super League Event Level</p>
 </template>

@@ -1,3 +1,3 @@
 <template>
-	<p>Auth</p>
+	<h1>Cosmetics</h1>
 </template>

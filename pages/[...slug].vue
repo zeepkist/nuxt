@@ -1,3 +1,3 @@
 <template>
-  <p>Catch All Route</p>
+	<h1>404</h1>
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <p>Adventure</p>
+	<h1>Adventure</h1>
 </template>
