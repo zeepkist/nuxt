@@ -25,7 +25,8 @@
 					<p>
 						Search for <code>{{ doc.title }}</code> on Modkist
 						(Recommended) or
-						<a :href="doc.modio">download mod manually</a> (Requires BepInEx setup)
+						<a :href="doc.modio">download mod manually</a>
+						(Requires BepInEx setup)
 					</p>
 				</div>
 
