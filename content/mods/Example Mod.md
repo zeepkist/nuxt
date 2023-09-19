@@ -1,5 +1,5 @@
 ---
-title: Best Mod
+title: Example Mod
 description: Example Description
 author: Thundernerd
 authorSteamId: 76561198023561976
@@ -18,20 +18,20 @@ See [the documentation](https://content.nuxtjs.org/guide/writing/markdown) on ho
 
 1. Step 1
 2. Step 2
-	1. Step 2.1
-	- Unnumbered step
+    1. Step 2.1
+    - Unnumbered step
 
 - Step 1
 - Step 2
-	- Step 2.1
+    - Step 2.1
 
 ### Header 3
 
 ```json
 {
-	"example": {
-		"boolean": true
-	}
+    "example": {
+        "boolean": true
+    }
 }
 ```
 

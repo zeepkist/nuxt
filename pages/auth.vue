@@ -1,3 +1,3 @@
 <template>
-	<p>Auth</p>
+    <p>Auth</p>
 </template>

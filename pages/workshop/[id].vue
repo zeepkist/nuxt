@@ -1,3 +1,3 @@
 <template>
-	<p>Workshop</p>
+    <p>Workshop</p>
 </template>

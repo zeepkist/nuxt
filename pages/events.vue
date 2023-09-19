@@ -1,3 +1,3 @@
 <template>
-	<h1>Community Events</h1>
+    <h1>Community Events</h1>
 </template>

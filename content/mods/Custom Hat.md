@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies: Zeep Settings
 ---
+
+Create custom hats for your character using blueprints.

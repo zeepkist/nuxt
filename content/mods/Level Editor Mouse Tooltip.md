@@ -9,7 +9,9 @@ modio: https://mod.io/g/zeepkist/m/level-editor-mouse-tooltip
 thumbnail: https://thumb.modcdn.io/mods/536e/2819830/thumb_1020x2000/mousetooltipbanner.png
 controls:
 commands:
-featured: true
+featured: false
 dependency: false
 dependencies: Zeep Settings
 ---
+
+Show a tooltip when hovering over object icons in the level editor.

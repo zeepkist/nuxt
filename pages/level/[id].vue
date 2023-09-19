@@ -1,3 +1,3 @@
 <template>
-	<p>Level</p>
+    <p>Level</p>
 </template>

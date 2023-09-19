@@ -13,3 +13,5 @@ featured: false
 dependency: true
 dependencies:
 ---
+
+The Zeepkist Software Development Kit, for modders, by modders.
