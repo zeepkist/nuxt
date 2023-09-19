@@ -1,40 +1,15 @@
 ---
 title: BlueprintsX
-description: A description of BlueprintsX
+description: Use blueprints in the level editor together with a suite of extra tools.
 author: Metalted
 authorSteamId: 76561198932043314
-version: 1.0.0
+version: 1.5.7
 supported: true
 modio: https://mod.io/g/zeepkist/m/blueprintsx
+thumbnail: https://thumb.modcdn.io/mods/cc3b/3137985/thumb_1020x2000/bpx_logo_banner_smaller.png
+controls:
+commands:
+featured: true
+dependency: false
+dependencies: Zeep Settings
 ---
-
-## Setup
-
-See [the documentation](https://content.nuxtjs.org/guide/writing/markdown) on how to embed images and other syntax.
-
-## Lists
-
-1. Step 1
-2. Step 2
-	1. Step 2.1
-	- Unnumbered step
-
-- Step 1
-- Step 2
-	- Step 2.1
-
-### Header 3
-
-```json
-{
-	"example": {
-		"boolean": true
-	}
-}
-```
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
