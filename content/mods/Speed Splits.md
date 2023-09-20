@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies:
 ---
+
+Stores the speed when going through checkpoints and shows them together with the split times.

@@ -1,3 +1,3 @@
 <template>
-	<p>Super League Event</p>
+    <p>Super League Event</p>
 </template>

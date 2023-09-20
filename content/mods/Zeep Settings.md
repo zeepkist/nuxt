@@ -13,3 +13,5 @@ featured: true
 dependency: false
 dependencies:
 ---
+
+Configure mod settings from within the Zeepkist Settings menu

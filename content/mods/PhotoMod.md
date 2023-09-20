@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies: Zeep Settings
 ---
+
+Move, scale and toggle the photomode user interface.

@@ -11,3 +11,5 @@ controls:
 commands:
 featured: false
 ---
+
+Add a colorful beating heart to your character.

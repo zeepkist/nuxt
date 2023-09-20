@@ -1,3 +1,3 @@
 <template>
-	<h1>Super League</h1>
+    <h1>Super League</h1>
 </template>

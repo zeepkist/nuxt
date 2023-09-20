@@ -13,3 +13,5 @@ featured:
 dependency: false
 dependencies:
 ---
+
+Configuration Manager

@@ -1,3 +1,3 @@
 <template>
-	<p>User</p>
+    <p>User</p>
 </template>

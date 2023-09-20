@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies: Zeep Settings, ZeepSDK
 ---
+
+Custom crash screens inspired by GTA, Mortal Kombat and more.

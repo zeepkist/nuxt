@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies:
 ---
+
+Changes the way workshop items are loaded at startup to reduce the number of network calls and improve loading time.

@@ -1,44 +1,44 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	typescript: {
-		strict: true,
-		typeCheck: true
-	},
+    typescript: {
+        strict: true,
+        typeCheck: true
+    },
 
-	experimental: {
-		reactivityTransform: true
-	},
+    experimental: {
+        reactivityTransform: true
+    },
 
-	imports: {
-		dirs: ['./stores']
-	},
+    imports: {
+        dirs: ['./stores']
+    },
 
-	modules: [
-		//'@nuxtjs/eslint-module',
-		'@nuxtjs/color-mode',
-		'@nuxtjs/fontaine',
-		'@nuxt/content',
-		'@pinia/nuxt',
-		'@pinia-plugin-persistedstate/nuxt',
-		'nuxt-typed-router'
-	],
+    modules: [
+        //'@nuxtjs/eslint-module',
+        '@nuxtjs/color-mode',
+        '@nuxtjs/fontaine',
+        '@nuxt/content',
+        '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
+        'nuxt-typed-router'
+    ],
 
-	content: {
-		highlight: {
-			theme: 'min-dark',
-			preload: ['json', 'ini']
-		}
-	},
+    content: {
+        highlight: {
+            theme: 'min-dark',
+            preload: ['json', 'ini']
+        }
+    },
 
-	colorMode: {
-		fallback: 'dark'
-	},
+    colorMode: {
+        fallback: 'dark'
+    },
 
-	devtools: {
-		enabled: true
-	},
+    devtools: {
+        enabled: true
+    },
 
-	pinia: {
-		autoImports: ['defineStore', 'acceptHMRUpdate']
-	}
+    pinia: {
+        autoImports: ['defineStore', 'acceptHMRUpdate']
+    }
 })

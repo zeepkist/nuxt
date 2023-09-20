@@ -13,3 +13,5 @@ featured: false
 dependency: false
 dependencies: ZeepSettings
 ---
+
+A utility for easy emoji's and commands.
