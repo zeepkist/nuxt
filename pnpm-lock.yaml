@@ -12,8 +12,8 @@ dependencies:
     specifier: ^2.40.0
     version: 2.40.0(vue@3.3.4)
   '@zeepkist/graphql':
-    specifier: ~1.5.0
-    version: 1.5.0
+    specifier: ~1.25.0
+    version: 1.25.0
   date-fns:
     specifier: ~2.30.0
     version: 2.30.0
@@ -3258,8 +3258,8 @@ packages:
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
     dev: true
 
-  /@zeepkist/graphql@1.5.0:
-    resolution: {integrity: sha512-BQvUb1cVSXO48rGEEDOVZa4KfCZCzZNZ8FJP3+Aux7TTIHjxq6fnSqZyMZwvmH0vc7wHcH42OqWVaxOzDhF18A==}
+  /@zeepkist/graphql@1.25.0:
+    resolution: {integrity: sha512-79GYCNXFG/lxFyxNr44q+t7IIzzx5in2FjS9ekI0ch//i0ysx1U+mYPe9KTPcTAAFDzA09ME1eGFA7I8cmfvtw==}
     dev: false
 
   /abbrev@1.1.1:
