@@ -26,7 +26,7 @@
         "@nuxtjs/fontaine": "~0.4.1",
         "@pinia-plugin-persistedstate/nuxt": "~1.2.0",
         "@pinia/nuxt": "~0.5.1",
-        "@rushstack/eslint-patch": "~1.5.1",
+        "@rushstack/eslint-patch": "~1.6.0",
         "@types/node": "~20.8.2",
         "@vue/eslint-config-prettier": "~7.1.0",
         "@vue/eslint-config-typescript": "~11.0.3",
