@@ -1,5 +1,5 @@
 import { refresh } from '~/services/gtr'
-import { Authentication } from '~/types'
+import { type Authentication } from '~/types'
 
 export const useAuthenticationStore = defineStore({
     id: 'authentication',

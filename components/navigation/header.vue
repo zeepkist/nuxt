@@ -1,99 +1,99 @@
 <script setup lang="ts">
-    const transitionThreshold = 10
-    const isLargeHeader = ref(window.scrollY < transitionThreshold)
+    import {
+        type UiNavigationMenuRoot,
+        UiNavigationMenuVisibility
+    } from '~/types/ui.js'
 
-    const handleScroll = () => {
-        isLargeHeader.value = window.scrollY < transitionThreshold
-    }
+    const navigation: UiNavigationMenuRoot[] = [
+        {
+            title: 'other',
+            visibility: UiNavigationMenuVisibility.Collapsed,
 
-    window.addEventListener('scroll', handleScroll)
+            children: []
+        },
+        {
+            title: 'home',
+            name: 'index',
+            visibility: UiNavigationMenuVisibility.Always
+        },
+        {
+            title: 'cosmetics',
+            visibility: UiNavigationMenuVisibility.UnCollapsed,
+            children: [
+                {
+                    title: 'Hats',
+                    subtitle: 'Unlockable Hats',
+                    name: 'cosmetics-hats'
+                },
+                {
+                    title: 'Soapboxes',
+                    subtitle: 'Unlockable Soapboxes',
+                    name: 'cosmetics-soapboxes'
+                },
+                {
+                    title: 'Skins',
+                    subtitle: 'Unlockable Skins',
+                    name: 'cosmetics-skins'
+                }
+            ]
+        },
+        {
+            title: 'levels',
+            visibility: UiNavigationMenuVisibility.UnCollapsed,
+
+            children: [
+                {
+                    title: 'Adventure Mode Levels',
+                    subtitle: 'Built-in levels',
+                    name: 'adventure'
+                },
+                {
+                    title: 'Workshop Levels',
+                    subtitle: 'Community created levels',
+                    name: 'levels'
+                }
+            ]
+        },
+        {
+            title: 'users',
+            name: 'users',
+            visibility: UiNavigationMenuVisibility.UnCollapsed
+        },
+        {
+            title: 'super League',
+            name: 'super-league',
+            visibility: UiNavigationMenuVisibility.Always
+        },
+        {
+            title: 'events',
+            visibility: UiNavigationMenuVisibility.UnCollapsed,
+
+            children: [
+                {
+                    title: 'Cup of the Day',
+                    subtitle: 'Weekly community-run knock-out tournaments',
+                    name: 'events-cotd'
+                },
+                {
+                    title: 'Other Events',
+                    subtitle: 'Community-run events',
+                    name: 'events-other'
+                }
+            ]
+        },
+        {
+            title: 'mods',
+            name: 'mods',
+            visibility: UiNavigationMenuVisibility.UnCollapsed
+        },
+        {
+            title: 'toolkist',
+            path: 'https://toolkist.netlify.app',
+            visibility: UiNavigationMenuVisibility.UnCollapsed
+        }
+    ]
 </script>
 
 <template>
-    <div :class="[$style.header, { [$style.largeHeader]: isLargeHeader }]">
-        <nav>
-            <div :class="$style.left">
-                <RouterLink :to="{ name: 'index' }">Home</RouterLink>
-                <RouterLink :to="{ name: 'cosmetics' }">Cosmetics</RouterLink>
-                <RouterLink :to="{ name: 'adventure' }"
-                    >Adventure Mode</RouterLink
-                >
-                <RouterLink :to="{ name: 'levels' }">Levels</RouterLink>
-                <RouterLink :to="{ name: 'users' }">Users</RouterLink>
-                <RouterLink :to="{ name: 'super-league' }"
-                    >Super League</RouterLink
-                >
-                <RouterLink :to="{ name: 'events' }">Events</RouterLink>
-                <RouterLink :to="{ name: 'mods' }">Mods</RouterLink>
-                <a href="https://toolkist.netlify.app">Toolkist</a>
-            </div>
-            <div :class="$style.right">
-                <NavigationColourMode />
-            </div>
-        </nav>
-    </div>
+    <UiNavigation :menu="navigation" />
 </template>
-
-<style module lang="less">
-    .header {
-        background: var(--card-background-colour);
-        height: 4rem;
-        display: flex;
-        position: sticky;
-        top: 0;
-        transform: translateZ(0);
-        transition: height 0.3s, background-color 0.15s;
-        user-select: none;
-        border-bottom: 1px solid var(--border-colour);
-        z-index: 999;
-
-        &.largeHeader {
-            background: transparent;
-            height: 6rem;
-            transform: translateZ(0);
-            transition: height 0.3s, background-color 0.15s;
-            border-color: transparent;
-        }
-
-        nav {
-            max-width: 100rem;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 0 auto;
-
-            @media screen and (max-width: 102rem) {
-                padding: 0 1rem;
-            }
-        }
-
-        nav > .left {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-        }
-
-        nav > .right {
-            flex: 1;
-            text-align: right;
-        }
-
-        a {
-            font-size: 0.75rem;
-            color: var(--text-colour);
-            transition: color 0.3s;
-            text-transform: lowercase;
-
-            &:hover,
-            &:global(.router-link-active) {
-                color: var(--accent-colour);
-            }
-
-            &:global(.router-link-exact-active) {
-                pointer-events: none;
-            }
-        }
-    }
-</style>

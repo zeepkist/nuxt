@@ -1,30 +1,204 @@
 <template>
-    <NuxtLayout>
-        <ColorScheme>
-            <NavigationHeader />
-            <main>
-                <NuxtPage />
-            </main>
-        </ColorScheme>
-    </NuxtLayout>
+    <ColorScheme placeholder="...">
+        <NavigationHeader />
+        <main>
+            <NuxtPage />
+        </main>
+    </ColorScheme>
 </template>
 
 <style lang="less">
     // https://color-mode.nuxtjs.org/
     :root {
-        --background-colour: rgb(255, 255, 255);
+        --background-colour: rgb(245, 245, 245);
+        --background-colour-inverted: rgb(34, 34, 34);
+
         --card-background-colour: rgb(255, 255, 255);
+        --card-background-colour-inverted: rgb(24, 24, 24);
+
         --text-colour: rgb(8, 11, 25);
+        --text-colour-inverted: rgb(255, 255, 255);
+
         --accent-colour: rgb(255, 169, 38);
-        --border-colour: rgb(51, 51, 53);
+
+        --border-colour: rgb(230, 230, 230);
+        --border-colour-inverted: rgb(51, 51, 53);
+
+        --box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+            hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
         --error-colour: rgb(255, 0, 0);
         --error-background-colour: rgba(255, 17, 17, 0.067);
+
+        --border-radius: 1rem;
+
+        --page-width: 100rem;
+
+        --navigation-height-large: 5rem;
+        --navigation-height-small: 3rem;
     }
 
-    html.dark-mode {
+    html[data-theme='dark'] {
         --background-colour: rgb(34, 34, 34);
+        --background-colour-inverted: rgb(245, 245, 245);
+
         --card-background-colour: rgb(24, 24, 24);
+        --card-background-colour-inverted: rgb(255, 255, 255);
+
         --text-colour: rgb(255, 255, 255);
+        --text-colour-inverted: rgb(8, 11, 25);
+
+        --border-colour: rgb(51, 51, 53);
+        --border-colour-inverted: rgb(230, 230, 230);
+    }
+
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    bdi,
+    bdo,
+    blockquote,
+    body,
+    br,
+    button,
+    canvas,
+    caption,
+    cite,
+    code,
+    col,
+    colgroup,
+    data,
+    datalist,
+    dd,
+    del,
+    details,
+    dfn,
+    dialog,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    hr,
+    html,
+    i,
+    iframe,
+    img,
+    input,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    main,
+    map,
+    mark,
+    menu,
+    meter,
+    nav,
+    object,
+    ol,
+    optgroup,
+    option,
+    output,
+    p,
+    pre,
+    progress,
+    q,
+    rp,
+    rt,
+    ruby,
+    s,
+    samp,
+    search,
+    section,
+    select,
+    small,
+    source,
+    span,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    textarea,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    track,
+    u,
+    ul,
+    var,
+    video,
+    wbr {
+        all: unset;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-weight: 400;
+        vertical-align: baseline;
+        background: transparent;
+        box-sizing: border-box;
+        color: inherit;
+        text-decoration: none;
+        text-align: inherit;
+        text-transform: inherit;
+        text-rendering: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        -webkit-font-smoothing: inherit;
+        -moz-osx-font-smoothing: inherit;
+        transition: color 0.2s, background-color 0.2s;
+
+        &:focus,
+        &:focus-visible {
+            outline: 1px solid var(--accent-colour);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+    }
+
+    img,
+    button,
+    textarea,
+    input,
+    select {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    p,
+    div,
+    section,
+    main,
+    footer,
+    nav,
+    header {
+        display: block;
     }
 
     html {
@@ -34,8 +208,7 @@
         font-size: 1rem;
         overflow-x: clip;
         min-height: 100vh;
-        transition: color 0.5s, background-color 0.5s;
-        scroll-padding-top: 4rem;
+        scroll-padding-top: var(--navigation-height-large);
 
         font-family: 'Shin Go Pr5', Inter, -apple-system, BlinkMacSystemFont,
             'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
@@ -51,14 +224,9 @@
         border-radius: 0.5rem;
     }
 
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
     main {
-        margin: 0 auto;
-        max-width: 100rem;
+        margin: var(--navigation-height-large) auto 0;
+        max-width: var(--page-width);
 
         @media screen and (max-width: 102rem) {
             padding: 0 1rem;

@@ -18,9 +18,11 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
         '@nuxtjs/fontaine',
         '@nuxt/content',
+        '@nuxtjs/i18n',
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
-        'nuxt-typed-router'
+        'nuxt-typed-router',
+        'radix-vue/nuxt'
     ],
 
     content: {
@@ -31,14 +33,28 @@ export default defineNuxtConfig({
     },
 
     colorMode: {
-        fallback: 'dark'
+        preference: 'system',
+        fallback: 'dark',
+        dataValue: 'theme'
     },
 
     devtools: {
-        enabled: true
+        enabled: true,
+        timeline: {
+            enabled: true
+        }
     },
 
-    pinia: {
-        autoImports: ['defineStore', 'acceptHMRUpdate']
+    nitro: {
+        devProxy: {
+            '/graphql/gtr': {
+                target: 'https://graphql.zeepkist-gtr.com',
+                changeOrigin: true
+            },
+            '/graphql/zworpshop': {
+                target: 'https://graphql.zworpshop.com',
+                changeOrigin: true
+            }
+        }
     }
 })

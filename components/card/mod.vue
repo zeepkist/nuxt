@@ -10,8 +10,9 @@
 </script>
 
 <template>
-    <a
-        :href="href"
+    <RouterLink
+        v-if="href"
+        :to="{ path: href }"
         :class="$style.card"
         :style="{ '--mod-thumbnail': `url(${thumbnail}` }">
         <img v-if="thumbnail" :src="thumbnail" alt="Mod Thumbnail" />
@@ -25,7 +26,7 @@
         </p>
 
         <p>{{ description }}</p>
-    </a>
+    </RouterLink>
 </template>
 
 <style module lang="less">
@@ -40,6 +41,7 @@
         gap: 1rem;
         padding: 1rem;
         transition: border-color 0.3s;
+        cursor: pointer;
 
         p {
             font-size: 0.9rem;
