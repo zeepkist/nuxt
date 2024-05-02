@@ -50,8 +50,8 @@ devDependencies:
     specifier: ~0.5.1
     version: 0.5.1(rollup@3.29.4)(typescript@5.2.2)(vue@3.3.13)
   '@rushstack/eslint-patch':
-    specifier: ~1.6.0
-    version: 1.6.1
+    specifier: ~1.10.0
+    version: 1.10.2
   '@types/node':
     specifier: ~20.11.0
     version: 20.11.0
@@ -2555,8 +2555,8 @@ packages:
     dev: true
     optional: true
 
-  /@rushstack/eslint-patch@1.6.1:
-    resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
+  /@rushstack/eslint-patch@1.10.2:
+    resolution: {integrity: sha512-hw437iINopmQuxWPSUEvqE56NCPsiU8N4AYtfHmJFckclktzK9YQJieD3XkDCDH4OjL+C7zgPUh73R/nrcHrqw==}
     dev: true
 
   /@sigstore/bundle@2.2.0:
